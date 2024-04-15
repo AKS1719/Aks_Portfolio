@@ -230,9 +230,27 @@ section{
 
 }
 
+#Skills .badges{
+    margin-top: 2rem;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#Skills .badges img{
+    margin: 1rem;
+    height: 6rem !important;
+}
+
+#hackerRank{
+}
+
+#credly{
+}
 
 #Experience{
-    background-color: yellow;
+    background-color: #f5f8fd;
 }
 
 #Certifications{
@@ -244,20 +262,10 @@ section{
 }
 
 #Certifications  img{
-    height: 40rem;
+    height: 48rem;
 }
 
-#Certifications .badges{
-    padding: 1rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
-#Certifications .badges img{
-    margin: 1rem;
-    height: 5rem !important;
-}
 
 #Project{
     background-color: white;

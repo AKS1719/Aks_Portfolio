@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+}
+
+:root{
+    --nav-width : 18.5vw;
+}
+
+body{
+    display: flex;
+    /* background-image: url("/Dashboard/images/background.jpg"); */
+}
+
+
+/* Navigation */
+
+#my-navbar::before{
+    content: " ";
+    position: absolute;
+    background-image: url("/Dashboard/images/background.jpg");
+    height: 100%;
+    width: var(--nav-width);
+    filter: blur(10px);
+    z-index: -1;
+    opacity: 1;
+}
+#my-navbar{
+    height: 100vh;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.4);
+    width: var(--nav-width);    
+}
+
+
+
+.nav-header{
+    padding-top: 3rem;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.nav-header img{
+    height: 8rem;
+    border-radius: 100%;
+    border: 0.4rem solid #4c829167;
+}
+
+.nav-header h4{
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.nav-header i{
+    color: white;
+}
+
+.nav-header #SocialLinks{
+    margin-top: 1rem ;
+}
+
+.nav-header #SocialLinks a{
+    margin: 0.5rem;
+    
+}
+
+.nav-header #SocialLinks i:hover{
+    color: #149ddd;
+}
+#my-navbar ul{
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+    padding-left: 4rem;
+}
+
+#my-navbar ul a{
+    text-decoration: none;
+    color: grey;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+#my-navbar li{
+    display: inline;
+    margin-top: 2rem;
+    transition: color 0.3s;
+}
+
+#my-navbar li i{
+    color: grey;
+    
+}
+
+#my-navbar li.active a {
+    color: white;
+}
+
+#my-navbar li.active a i {
+    color: #149ddd;
+}
+
+.active i{
+    color: #149ddd;
+}
+
+#my-navbar li:hover i{
+    color: #149ddd;
+}
+
+#my-navbar li:hover a{
+    color: white;
+}
+
+
+/*  my container  */
+.my-container{
+    overflow-y: scroll;
+    height: 100vh;
+    width: calc(100% - var(--nav-width));
+    scroll-behavior: smooth;
+}
+
+
+
+.my-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+section{
+    /* border: 1px solid; */
+    display: block; 
+    height: 100%;
+}
+
+#Home{
+    position: relative;
+    background-image: url("/Dashboard/images/mypic.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: right;
+    background-attachment: fixed;
+    padding: 5rem;
+    font-size: 3rem ;
+}
+
+#Home::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    opacity: 0.3;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#Home .cursor {
+    display: inline-block;
+    vertical-align: top;
+    width: 0.2em;
+    animation: blink 0.7s infinite alternate;
+}
+
+#Home .my-name{
+    margin-top: 10rem;
+}
+#About{
+    background-color: rgb(253, 253, 253);
+    background-attachment: fixed;
+    padding: 2.4rem;
+}
+
+#About .aboutTitle{
+    font-size: 2.5rem;
+}
+
+#About .aboutSelf{
+    font-size: 1.2rem;
+}
+
+
+#About img{
+    height: 26rem;
+}
+
+#About .details div{
+    margin-top: 0;
+    margin-left: 5rem;
+    line-height: 2.5rem;
+}
+
+#About .details{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#About td{
+    padding: 0.4rem;
+}
+#About a{
+    text-decoration: none;
+}
+
+
+#Skills{
+    background: url('/Dashboard/images/skillBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2.4rem;
+    color: white;
+}
+
+#Skills .skills-title{
+    font-size: 2.4rem;
+}
+#Skills .skills-container{
+    padding: 2rem;
+}
+
+#Skills #skill-first-column{
+    margin-right: 2rem ;
+
+}
+
+
+#Experience{
+    background-color: yellow;
+}
+
+#Certifications{
+    background: url('/Dashboard/images/certiBack.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2.4rem;
+}
+
+#Certifications  img{
+    height: 40rem;
+}
+
+#Certifications .badges{
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#Certifications .badges img{
+    margin: 1rem;
+    height: 5rem !important;
+}
+
+#Project{
+    background-color: white;
+}
+#Project .container-project{
+    height: 89%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#Project .container-project .card{
+    margin: 1rem;
+}
+
+#Contact{
+    background-color: pink;
+}
+
+
+/* Utility */
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-text{
+    color: white;
+}
+.black-text{
+    color: black;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/*  key frames  */
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

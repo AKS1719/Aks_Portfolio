@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Dashboard/fontawesome-free-6.5.2-web/css/all.css">
     <link rel="shortcut icon" href="/Dashboard/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/Dashboard/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Dashboard/css/homeSection.css">
+    <link rel="stylesheet" href="/Dashboard/css/aboutSection.css">
+    <link rel="stylesheet" href="/Dashboard/css/utility.css">
+    <link rel="stylesheet" href="/Dashboard/css/skillSection.css">
+    <link rel="stylesheet" href="/Dashboard/css/resumeSection.css">
+    <link rel="stylesheet" href="/Dashboard/css/projectSection.css">
+    <link rel="stylesheet" href="/Dashboard/css/certificationSection.css">
+    <link rel="stylesheet" href="/Dashboard/css/contactSection.css">
 </head>
 
 <body>
@@ -32,19 +39,19 @@
             <li class="active"><a href="#Home"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a></li>
             <li><a href="#About"><i class="fa-regular fa-user"></i>&nbsp;&nbsp;About Me</a></li>
             <li><a href="#Skills"><i class="fa-solid fa-laptop"></i>&nbsp;&nbsp;Skills</a></li>
-            <li><a href="#Experience"><i class="fa-regular fa-file"></i>&nbsp;&nbsp;Experience</a></li>
+            <li><a href="#Resume"><i class="fa-regular fa-file"></i>&nbsp;&nbsp;Resume</a></li>
             <li><a href="#Certifications"><i class="fa-solid fa-certificate"></i>&nbsp;&nbsp;Certifications</a></li>
             <li><a href="#Project"><i class="fa-solid fa-list-check"></i>&nbsp;&nbsp;Project</a></li>
+            <li id="imbed-nav" style="display: none;"><a id="variable" href="#imbeding">hi</a></li>
             <li><a href="#Contact"><i class="fa-regular fa-address-book"></i>&nbsp;&nbsp;Contact</a></li>
-            <li><a id="variable" href="#imbeding"></a></li>
         </ul>
     </nav>
     <div class="my-container">
         <section id="Home">
             <div class="my-name">
-                <b>Akshat Kumar Sinha</b>
-                <p>I'm a&nbsp;<span class="text"></span><span class="cursor">|</span> </span></p>
-
+                <b>Akshat Kumar Sinha
+                    <p>I'm a&nbsp;<span class="text"></span><span class="cursor">|</span> </span></p>
+                </b>
             </div>
         </section>
         <section id="About">
@@ -94,92 +101,289 @@
 
                 </div>
             </div>
-            <p class="aboutSelf">Highly motivated and aspiring web developer, eager to embark on a journey in designing,developing, and maintaining responsive and user-friendly websites and web applications. Proficient in front-end and back-end technologies, with a keen interest in delivering innovative solutions to address client needs and surpass project objectives. Strong problem-solving abilities, coupled with meticulous attention to detail and a relentless drive to stay updated with emerging web technologies, fuel my dedication to crafting high-quality code and delivering exceptional user experiences.p>
+            <p class="aboutSelf">Highly motivated and aspiring web developer, eager to embark on a journey in designing, developing, and maintaining responsive and user-friendly websites and web applications. Proficient in front-end and back-end technologies, with a keen interest in delivering innovative solutions to address client needs and surpass project objectives. Strong problem-solving abilities, coupled with meticulous attention to detail and a relentless drive to stay updated with emerging web technologies, fuel my dedication to crafting high-quality code and delivering exceptional user experiences.p>
         </section>
         <section id="Skills">
             <p class="skills-title">Skills</p>
             <div class="skills-container flex">
-                <div id="skill-first-column" class="col-sm-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">HTML</p>
-                            <p class="mb-2">90%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                <div class="skill-tab flex">
+                    <a name="languages" class="skill-active" onclick="changeActiveSkill('languages');changeTab('python')">Programing Languages</a>
+                    <a name="webdev" onclick="changeActiveSkill('webdev');changeTab('html')">Web Development</a>
+                    <a name="devtools" onclick="changeActiveSkill('devtools');changeTab('python')">Development Tools</a>
+                    <a name="SystemAdminitstration" onclick="changeActiveSkill('SystemAdminitstration');changeTab('python')">System Administration</a>
+                </div>
+                <div class="skill-tab-container flex-row">
+                    <div id="languages" class="skill-tab-inside">
+                        <p style="text-align: center;">Languages &amp; Badges Earned </p>
+                        <div class="languages-container flex-row">
+                            <div class="nav-tab flex">
+                                <ul>
+                                    <li name="python" class="lang-active" onclick="changeTab('python')">Python</li>
+                                    <li name="java" onclick="changeTab('java')">Java</li>
+                                    <li name="cpp" onclick="changeTab('cpp')">C++</li>
+                                    <li name="c" onclick="changeTab('c')">C</li>
+                                </ul>
+                            </div>
+                            <div id="python" class="language-tab-container flex-column">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+                            <div id="java" class="language-tab-container flex-column" style="display: none;">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+
+                            <div id="cpp" class="language-tab-container flex-column" style="display: none;">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+
+                            <div id="c" class="language-tab-container flex-column" style="display: none;">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">CSS</p>
-                            <p class="mb-2">90%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                    <div id="webdev" class="skill-tab-inside" style="display: none;">
+                        <p style="text-align: center;">Languages &amp; Badges Earned </p>
+                        <div class="languages-container flex-row">
+                            <div class="nav-tab flex">
+                                <ul>
+                                    <li name="html" class="lang-active" onclick="changeTab('html')">Html</li>
+                                    <li name="css" onclick="changeTab('css')">CSS</li>
+                                    <li name="js" onclick="changeTab('js')">JavaScript</li>
+                                    <li name="nodejs" onclick="changeTab('nodejs')">Nodejs</li>
+                                </ul>
+                            </div>
+                            <div id="html" class="language-tab-container flex-column">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+                            <div id="css" class="language-tab-container flex-column" style="display: none;">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+
+                            <div id="js" class="language-tab-container flex-column" style="display: none;">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+
+                            <div id="nodejs" class="language-tab-container flex-column" style="display: none;">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Java</p>
-                            <p class="mb-2">60%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                    <div id="devtools" class="skill-tab-inside" style="display: none;">
+                        <p style="text-align: center;">Languages &amp; Badges Earned </p>
+                        <div class="languages-container flex-row">
+                            <div class="nav-tab flex">
+                                <ul>
+                                    <li name="vscode" class="lang-active" onclick="changeTab('vscode')">Python</li>
+                                    <li name="androidStudio" onclick="changeTab('androidStudio')">Java</li>
+                                </ul>
+                            </div>
+                            <div id="vscode" class="language-tab-container flex-column">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
+                            <div id="androidStudio" class="language-tab-container flex-column" style="display: none;">
+                                <div class="img-center">
+
+                                    <img src="/Dashboard/badges/python.png" alt="">
+                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
+                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
+                                </div>
+                                <div class="button-bottom">
+                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
+                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Node Js</p>
-                            <p class="mb-2">70%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                    <div id="SystemAdminitstration" class="skill-tab-inside" style="display: none;">
+                        <p style="text-align: center;">Red Hat</p>
+                        <div class="system-container">
+                            <p>This is my RedHat System Administration CertiFicates</p>
+                            <div class="sytem-content flex">
+                                <div class="redhat-badge flex-column">
+                                    <img src="/Dashboard/badges/redhat.png" alt="" style="height: 10rem; margin-top: 0.3rem;">&nbsp;&nbsp; This is my redhat Badge
+                                </div>
+                                <div class="flex-column">
+                                    <img class="redhat-certi-img" src="/Dashboard/certificates/redhat.jpeg" style="height: 15rem; margin-top: 0.7rem;">&nbsp;&nbsp; This is my Redhat System
+                                    Administration Certificate
+                                </div>
+                            </div>
+                            <div>
+                                
+                                <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Javascript</p>
-                            <p class="mb-2">60%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+
+            </div>
+        </section>
+        <section id="Resume">
+            <div class="resume-title">
+                Resume
+            </div>
+            <div class="resume-container flex">
+                <div class="resume-card">
+                    <div class="res-title">
+                        SUMMARY
+                    </div>
+                    <div class="item">
+                        <div class="name">Akshat Kumar Sinha</div>
+                        <div class="institution">I'm a dedicated web developer and competitive coder passionate about crafting elegant solutions to complex problems. My mission is to leverage my web development and competitive coding skills to create innovative digital experiences and excel in challenging coding environments.</div>
+                        <div>
+                            <ul>
+                                <li>Surampalem, Andhra Pradesh, India</li>
+                                <li>+91 7549679327</li>
+                                <li>kumarsinhaakshat8@gmail.com</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">C++</p>
-                            <p class="mb-2">70%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                        </div>
+                    
+                </div>
+                <div class="resume-card">
+                    <div class="res-title">
+                        Courses
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Python</p>
-                            <p class="mb-2">80%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                        </div>
+                    <div class="item">
+                        <div class="name">HTML 5 and Fundamentals</div>
+                        <div class="institution">EDX private ltd.</div>
+                        <div class="course-time">March 2024 - April 2024</div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Red Hat</p>
-                            <p class="mb-2">70%</p>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                        </div>
+                    <div class="item">
+                        <div class="name">Red Hat System Administration</div>
+                        <div class="institution">Technical hub private limited</div>
+                        <div class="course-time">September 2022 - June 2023</div>
                     </div>
+                    <div class="item">
+                        <div class="name">Java</div>
+                        <div class="institution">Technical hub private limited</div>
+                        <div class="course-time">March 2023 - April 2024</div>
+                    </div>
+                    
                 </div>
             </div>
-
-        </section>
-        <section id="Experience">
-            Experience
+            <div class="resume-container flex">
+                <div class="resume-card">
+                    <div class="res-title">
+                        Education
+                    </div>
+                    <div class="item">
+                        <div class="name">B. Tech</div>
+                        <div class="institution">Aditya College of Engineering &amp; Technology, Surampalem, Andhra Pradesh</div>
+                        <div class="edu-time">2021-present</div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Intermediate</div>
+                        <div class="institution">D.A.V Ara Kuju, Sarubera, Ramgarh, Jharkhand</div>
+                        <div class="edu-time">2019-2021</div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Metriculation</div>
+                        <div class="institution">D.A.V co-operative Sr. Sec. School,Khalari, Ranchi , Jharkhand</div>
+                        <div class="edu-time">2007-2019</div>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <div class="res-title">
+                        Internship
+                    </div>
+                    <div class="item">
+                        <div class="name">Problem-Solving and Java</div>
+                        <div class="institution">Technical hub Private Limited</div>
+                        <div class="course-time">May 2023 - July 2023
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name">Machine Learning with Python</div>
+                        <div class="institution">Verzeo Private limited</div>
+                        <div class="course-time">May 2022 - June 2022</div>
+                    </div>
+                                       
+                </div>
+            </div>
+            <div class="flex resume-button"><a href="">Download Full Resume</a> <a href="">View Full Resume</a></div>
         </section>
         <section id="Certifications">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -219,12 +423,7 @@
                 </button>
             </div>
 
-            <div class="badges flex">
-                <img src="/Dashboard/badges/problemSolving.png" alt="">
-                <img src="/Dashboard/badges/cpp.png" alt="">
-                <img src="/Dashboard/badges/python.png" alt="">
-                <img src="/Dashboard/badges/c.png" alt="">
-            </div>
+
 
         </section>
         <section id="Project">
@@ -235,9 +434,8 @@
                     <img src="/Dashboard/images/msc.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Music Player Project</h5>
-                        <p class="card-text">It is a Web-based Music Player by which we can play the Provided Songs.
-                            With play/pause/next/previous functionalities.</p>
-                        <a href="http://akshat-project-site.onrender.com/music" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">It is a Web-based Music Player by which we can play the Provided Songs. With play/pause/next/previous functionalities.</p>
+                        <a href="http://akshat-project-site.onrender.com/music" class="btn btn-primary">See Project</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
@@ -245,18 +443,30 @@
                     <div class="card-body">
                         <h5 class="card-title">Digital Clock Project</h5>
                         <p class="card-text">A simple Digital clock Shows Time in 12-hour format</p>
-                        <a href="http://akshat-project-site.onrender.com/clock" class="btn btn-primary">Go somewhere</a>
+                        <a href="http://akshat-project-site.onrender.com/clock" class="btn btn-primary">See Project</a>
                     </div>
                 </div>
             </div>
 
         </section>
-        <section id="Contact">
-            | Contact Me
-        </section>
 
         <section id="imbeding" style="display: none;">
 
+
+        </section>
+        <section id="Contact">
+            <div class="contact-title">
+                Contact
+            </div>
+            <div class="contact-container">
+                <div class="contact-details">
+                    <p>
+                    <h5>Location :</h5><br>Surampalem,Andhra Pradesh , India</p>
+                    <p>
+                    <h5>Email:</h5><br>kumarsinhaakshat8@gmail.com</p>
+                </div>
+                <div class="contact-form"></div>
+            </div>
         </section>
 
     </div>
@@ -265,12 +475,12 @@
 
 
 </body>
-<script src="/Dashboard/js/index.js"></script>
 <script src="/Dashboard/js/activeLinks.js"></script>
 <script src="/Dashboard/js/typed.js"></script>
 <script src="/Dashboard/js/typedAbout.js"></script>
 <script src="/Dashboard/js/connectSocial.js"></script>
 <script src="/Dashboard/js/github.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="/Dashboard/js/activeskill.js"></script>
 
 </html>

@@ -1,6 +1,6 @@
 var imbeding = document.getElementById("imbeding");
+var imbednav = document.getElementById("imbed-nav");
 var variable = document.getElementById("variable");
-
 obj = {
     "linkedin":`<iframe src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25397783' frameborder='0' width='100%' height='1000'></iframe>`,
     "facebook":`<iframe src='https://widgets.sociablekit.com/facebook-profile/iframe/25397785' frameborder='0' width='100%' height='1000'></iframe>`,
@@ -18,10 +18,11 @@ icons = {
 }
 
 
+
 function socialProfile(param)
 {
-    // console.log(imbeding);
     imbeding.style.display='block';
+    imbednav.style.display='block';
     imbeding.innerHTML = obj[param];
     variable.innerHTML = icons[param];
 }

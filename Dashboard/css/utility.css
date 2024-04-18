@@ -1,0 +1,33 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-text{
+    color: white;
+}
+.black-text{
+    color: black;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+.italic{
+    font-style: italic;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,43 @@
+#Home{
+    position: relative;
+    background-image: url("/Dashboard/images/home-back.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: right;
+    background-attachment: fixed;
+    padding: 9rem;
+    font-size: 3rem ;
+}
+
+#Home::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    opacity: 0.3;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#Home .cursor {
+    display: inline-block;
+    vertical-align: top;
+    width: 0.2em;
+    animation: blink 0.7s infinite alternate;
+}
+
+#Home .my-name{
+    margin-top: 10rem;
+}
+
+
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     font-family: "Exo 2", sans-serif;
+    cursor: url('/Dashboard/images/cursor.png'), auto;
+}
+a{
+    cursor: url("/Dashboard/images/pointer.png"),auto;
 }
 
 :root{
@@ -129,191 +133,35 @@ body{
 .my-container::-webkit-scrollbar{
     display: none;
 }
+.container-project::-webkit-scrollbar{
+    display: none;
+}
 
 
 section{
     /* border: 1px solid; */
     display: block; 
     height: 100%;
+    
 }
 
-#Home{
-    position: relative;
-    background-image: url("/Dashboard/images/mypic.jpg");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: right;
-    background-attachment: fixed;
-    padding: 5rem;
-    font-size: 3rem ;
+section::-webkit-scrollbar{
+    display: none;
 }
 
-#Home::before{
-    content: "";
+
+#circularcursor {
+    background-color: transparent;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
     position: absolute;
-    background-color: black;
-    opacity: 0.3;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-}
-
-#Home .cursor {
-    display: inline-block;
-    vertical-align: top;
-    width: 0.2em;
-    animation: blink 0.7s infinite alternate;
-}
-
-#Home .my-name{
-    margin-top: 10rem;
-}
-#About{
-    background-color: rgb(253, 253, 253);
-    background-attachment: fixed;
-    padding: 2.4rem;
-}
-
-#About .aboutTitle{
-    font-size: 2.5rem;
-}
-
-#About .aboutSelf{
-    font-size: 1.2rem;
+    z-index: 1;
 }
 
 
-#About img{
-    height: 26rem;
-}
-
-#About .details div{
-    margin-top: 0;
-    margin-left: 5rem;
-    line-height: 2.5rem;
-}
-
-#About .details{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-#About td{
-    padding: 0.4rem;
-}
-#About a{
-    text-decoration: none;
-}
-
-
-#Skills{
-    background: url('/Dashboard/images/skillBackground.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 2.4rem;
-    color: white;
-}
-
-#Skills .skills-title{
-    font-size: 2.4rem;
-}
-#Skills .skills-container{
-    padding: 2rem;
-}
-
-#Skills #skill-first-column{
-    margin-right: 2rem ;
-
-}
-
-#Skills .badges{
-    margin-top: 2rem;
-    padding: 1rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#Skills .badges img{
-    margin: 1rem;
-    height: 6rem !important;
-}
-
-#hackerRank{
-}
-
-#credly{
-}
-
-#Experience{
-    background-color: #f5f8fd;
-}
-
-#Certifications{
-    background: url('/Dashboard/images/certiBack.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 2.4rem;
-}
-
-#Certifications  img{
-    height: 48rem;
-}
-
-
-
-#Project{
-    background-color: white;
-}
-#Project .container-project{
-    height: 89%;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+#imbeding{
     overflow: hidden;
     overflow-y: scroll;
-}
-
-#Project .container-project .card{
-    margin: 1rem;
-}
-
-#Contact{
-    background-color: pink;
-}
-
-
-/* Utility */
-
-.flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.white-text{
-    color: white;
-}
-.black-text{
-    color: black;
-}
-
-.bold{
-    font-weight: bold;
-}
-
-/*  key frames  */
-
-@keyframes blink {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
 }

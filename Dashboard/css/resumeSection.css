@@ -1,0 +1,85 @@
+
+
+#Resume{
+    background-color: #f5f8fd;
+    padding: 4rem;
+    padding-top: 2rem;
+}
+
+
+.item::before{
+    content: "";
+    position: absolute;
+    top: 9px;
+    border: 2px solid;
+    left: -16px;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    color: #149ddd;
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 22px;
+    border-left: 2px solid;
+    height: 93%;
+    width: 100%;
+    color: #149ddd;
+}
+
+
+
+.resume-container{
+    margin-top: 0.3rem;
+    justify-content: space-evenly;
+}
+
+.resume-card{
+    margin-left: 3rem;
+    padding: 1rem;
+    /* border: 2px solid; */
+    width: 50%;
+}
+
+.resume-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.institution{
+    font-style: oblique;
+    margin-left: 0.4rem;
+}
+
+.item{
+    position: relative;
+    margin-top: 0.4rem;
+    margin-left: 0.3rem;
+}
+
+.res-title{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.name{
+    margin-left: 0.2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+
+.item ul{
+    list-style: square;
+}
+
+.item ul li{
+    margin-top: 0.4rem;
+}
+
+.resume-button a{
+    margin: 0 3rem;
+    text-decoration: none;
+}

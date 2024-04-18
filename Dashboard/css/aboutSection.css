@@ -1,0 +1,37 @@
+#About{
+    background-color: rgb(253, 253, 253);
+    background-attachment: fixed;
+    padding: 2.4rem;
+}
+
+#About .aboutTitle{
+    font-size: 2.5rem;
+}
+
+#About .aboutSelf{
+    font-size: 1.2rem;
+}
+
+
+#About img{
+    height: 26rem;
+}
+
+#About .details div{
+    margin-top: 0;
+    margin-left: 5rem;
+}
+
+#About .details{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#About td{
+    padding: 0.9rem;
+}
+#About a{
+    text-decoration: none;
+}

@@ -1,486 +1,683 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshat's portfolio</title>
-    <link rel="stylesheet" href="/Dashboard/css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/Dashboard/fontawesome-free-6.5.2-web/css/all.css">
-    <link rel="shortcut icon" href="/Dashboard/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/Dashboard/css/homeSection.css">
-    <link rel="stylesheet" href="/Dashboard/css/aboutSection.css">
-    <link rel="stylesheet" href="/Dashboard/css/utility.css">
-    <link rel="stylesheet" href="/Dashboard/css/skillSection.css">
-    <link rel="stylesheet" href="/Dashboard/css/resumeSection.css">
-    <link rel="stylesheet" href="/Dashboard/css/projectSection.css">
-    <link rel="stylesheet" href="/Dashboard/css/certificationSection.css">
-    <link rel="stylesheet" href="/Dashboard/css/contactSection.css">
-</head>
-
-<body>
-
-    <nav id="my-navbar">
-        <div class="nav-header flex">
-            <img src="/Dashboard/images/mypic.jpg" alt="">
-            <h4 class="white-text">Akshat Kumar Sinha</h4>
-            <div id="SocialLinks">
-                <a id="#github" href="#imbeding" onclick="socialProfile('linkedin')"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-                <a href="#imbeding" onclick="socialProfile('twitter')"><i class="fa-brands fa-twitter fa-lg"></i></a>
-                <a href="#imbeding" onclick="socialProfile('github')"><i class="fa-brands fa-github fa-lg"></i></a>
-                <a href="#imbeding" onclick="socialProfile('facebook')"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                <a href="#imbeding" onclick="socialProfile('instagram')"><i class="fa-brands fa-instagram fa-lg"></i></a>
-
-            </div>
-
-        </div>
-        <ul class="flex">
-            <li class="active"><a href="#Home"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a></li>
-            <li><a href="#About"><i class="fa-regular fa-user"></i>&nbsp;&nbsp;About Me</a></li>
-            <li><a href="#Skills"><i class="fa-solid fa-laptop"></i>&nbsp;&nbsp;Skills</a></li>
-            <li><a href="#Resume"><i class="fa-regular fa-file"></i>&nbsp;&nbsp;Resume</a></li>
-            <li><a href="#Certifications"><i class="fa-solid fa-certificate"></i>&nbsp;&nbsp;Certifications</a></li>
-            <li><a href="#Project"><i class="fa-solid fa-list-check"></i>&nbsp;&nbsp;Project</a></li>
-            <li id="imbed-nav" style="display: none;"><a id="variable" href="#imbeding">hi</a></li>
-            <li><a href="#Contact"><i class="fa-regular fa-address-book"></i>&nbsp;&nbsp;Contact</a></li>
-        </ul>
-    </nav>
-    <div class="my-container">
-        <section id="Home">
-            <div class="my-name">
-                <b>Akshat Kumar Sinha
-                    <p>I'm a&nbsp;<span class="text"></span><span class="cursor">|</span> </span></p>
-                </b>
-            </div>
-        </section>
-        <section id="About">
-            <p class="aboutTitle">About</p>
-            <p class="aboutSelf">I'm a dedicated web developer and competitive coder passionate about crafting elegant solutions to complex problems. My mission is to leverage my skills in web development and competitive coding to create innovative digital experiences and excel in challenging coding environments.</p>
-            <div class="details flex">
-                <img src="/Dashboard/images/mypic.jpg" alt="">
-                <div>
-                    <h3>&nbsp;<span class="text"></span></h3>
-                    <table>
-                        <tr>
-                            <td class="bold">Birthday</td>
-                            <td>:</td>
-                            <td> 17th April 2003</td>
-                        </tr>
-                        <tr>
-                            <td class="bold">Website</td>
-                            <td>:</td>
-                            <td><a href="https://akshat-project-site.onrender.com/" target="_blank">https://akshat-project-site.onrender.com/</a></td>
-                        </tr>
-                        <tr>
-                            <td class="bold">Phone</td>
-                            <td>:</td>
-                            <td>+91 7549679327</td>
-                        </tr>
-                        <tr>
-                            <td class="bold">City</td>
-                            <td>:</td>
-                            <td>Surampalem , Andhra Pradesh</td>
-                        </tr>
-                        <tr>
-                            <td class="bold">Age</td>
-                            <td>:</td>
-                            <td>22</td>
-                        </tr>
-                        <tr>
-                            <td class="bold">Degree</td>
-                            <td>:</td>
-                            <td> B.Tech</td>
-                        </tr>
-                        <tr>
-                            <td class="bold">Email</td>
-                            <td>:</td>
-                            <td>kumarsinhaakshat8@gmail.com</td>
-                        </tr>
-                    </table>
-
-                </div>
-            </div>
-            <p class="aboutSelf">Highly motivated and aspiring web developer, eager to embark on a journey in designing, developing, and maintaining responsive and user-friendly websites and web applications. Proficient in front-end and back-end technologies, with a keen interest in delivering innovative solutions to address client needs and surpass project objectives. Strong problem-solving abilities, coupled with meticulous attention to detail and a relentless drive to stay updated with emerging web technologies, fuel my dedication to crafting high-quality code and delivering exceptional user experiences.p>
-        </section>
-        <section id="Skills">
-            <p class="skills-title">Skills</p>
-            <div class="skills-container flex">
-                <div class="skill-tab flex">
-                    <a name="languages" class="skill-active" onclick="changeActiveSkill('languages');changeTab('python')">Programing Languages</a>
-                    <a name="webdev" onclick="changeActiveSkill('webdev');changeTab('html')">Web Development</a>
-                    <a name="devtools" onclick="changeActiveSkill('devtools');changeTab('python')">Development Tools</a>
-                    <a name="SystemAdminitstration" onclick="changeActiveSkill('SystemAdminitstration');changeTab('python')">System Administration</a>
-                </div>
-                <div class="skill-tab-container flex-row">
-                    <div id="languages" class="skill-tab-inside">
-                        <p style="text-align: center;">Languages &amp; Badges Earned </p>
-                        <div class="languages-container flex-row">
-                            <div class="nav-tab flex">
-                                <ul>
-                                    <li name="python" class="lang-active" onclick="changeTab('python')">Python</li>
-                                    <li name="java" onclick="changeTab('java')">Java</li>
-                                    <li name="cpp" onclick="changeTab('cpp')">C++</li>
-                                    <li name="c" onclick="changeTab('c')">C</li>
-                                </ul>
-                            </div>
-                            <div id="python" class="language-tab-container flex-column">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-                            <div id="java" class="language-tab-container flex-column" style="display: none;">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-
-                            <div id="cpp" class="language-tab-container flex-column" style="display: none;">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-
-                            <div id="c" class="language-tab-container flex-column" style="display: none;">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div id="webdev" class="skill-tab-inside" style="display: none;">
-                        <p style="text-align: center;">Languages &amp; Badges Earned </p>
-                        <div class="languages-container flex-row">
-                            <div class="nav-tab flex">
-                                <ul>
-                                    <li name="html" class="lang-active" onclick="changeTab('html')">Html</li>
-                                    <li name="css" onclick="changeTab('css')">CSS</li>
-                                    <li name="js" onclick="changeTab('js')">JavaScript</li>
-                                    <li name="nodejs" onclick="changeTab('nodejs')">Nodejs</li>
-                                </ul>
-                            </div>
-                            <div id="html" class="language-tab-container flex-column">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-                            <div id="css" class="language-tab-container flex-column" style="display: none;">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-
-                            <div id="js" class="language-tab-container flex-column" style="display: none;">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-
-                            <div id="nodejs" class="language-tab-container flex-column" style="display: none;">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div id="devtools" class="skill-tab-inside" style="display: none;">
-                        <p style="text-align: center;">Languages &amp; Badges Earned </p>
-                        <div class="languages-container flex-row">
-                            <div class="nav-tab flex">
-                                <ul>
-                                    <li name="vscode" class="lang-active" onclick="changeTab('vscode')">Python</li>
-                                    <li name="androidStudio" onclick="changeTab('androidStudio')">Java</li>
-                                </ul>
-                            </div>
-                            <div id="vscode" class="language-tab-container flex-column">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-                            <div id="androidStudio" class="language-tab-container flex-column" style="display: none;">
-                                <div class="img-center">
-
-                                    <img src="/Dashboard/badges/python.png" alt="">
-                                    <img src="/Dashboard/badges/pythonibm.png" alt="">
-                                    <img src="/Dashboard/badges/pythonpearson.png" alt="">
-                                </div>
-                                <div class="button-bottom">
-                                    <a href="https://www.hackerrank.com/profile/kumarsinhaaksha1"><button class="btn btn-primary">Visit HackerRank</button></a>
-                                    <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="SystemAdminitstration" class="skill-tab-inside" style="display: none;">
-                        <p style="text-align: center;">Red Hat</p>
-                        <div class="system-container">
-                            <p>This is my RedHat System Administration CertiFicates</p>
-                            <div class="sytem-content flex">
-                                <div class="redhat-badge flex-column">
-                                    <img src="/Dashboard/badges/redhat.png" alt="" style="height: 10rem; margin-top: 0.3rem;">&nbsp;&nbsp; This is my redhat Badge
-                                </div>
-                                <div class="flex-column">
-                                    <img class="redhat-certi-img" src="/Dashboard/certificates/redhat.jpeg" style="height: 15rem; margin-top: 0.7rem;">&nbsp;&nbsp; This is my Redhat System
-                                    Administration Certificate
-                                </div>
-                            </div>
-                            <div>
-                                
-                                <a href="https://www.credly.com/users/aksinha/badges"><button class="btn btn-primary">Visit Credly</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section id="Resume">
-            <div class="resume-title">
-                Resume
-            </div>
-            <div class="resume-container flex">
-                <div class="resume-card">
-                    <div class="res-title">
-                        SUMMARY
-                    </div>
-                    <div class="item">
-                        <div class="name">Akshat Kumar Sinha</div>
-                        <div class="institution">I'm a dedicated web developer and competitive coder passionate about crafting elegant solutions to complex problems. My mission is to leverage my web development and competitive coding skills to create innovative digital experiences and excel in challenging coding environments.</div>
-                        <div>
-                            <ul>
-                                <li>Surampalem, Andhra Pradesh, India</li>
-                                <li>+91 7549679327</li>
-                                <li>kumarsinhaakshat8@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="resume-card">
-                    <div class="res-title">
-                        Courses
-                    </div>
-                    <div class="item">
-                        <div class="name">HTML 5 and Fundamentals</div>
-                        <div class="institution">EDX private ltd.</div>
-                        <div class="course-time">March 2024 - April 2024</div>
-                    </div>
-                    <div class="item">
-                        <div class="name">Red Hat System Administration</div>
-                        <div class="institution">Technical hub private limited</div>
-                        <div class="course-time">September 2022 - June 2023</div>
-                    </div>
-                    <div class="item">
-                        <div class="name">Java</div>
-                        <div class="institution">Technical hub private limited</div>
-                        <div class="course-time">March 2023 - April 2024</div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="resume-container flex">
-                <div class="resume-card">
-                    <div class="res-title">
-                        Education
-                    </div>
-                    <div class="item">
-                        <div class="name">B. Tech</div>
-                        <div class="institution">Aditya College of Engineering &amp; Technology, Surampalem, Andhra Pradesh</div>
-                        <div class="edu-time">2021-present</div>
-                    </div>
-                    <div class="item">
-                        <div class="name">Intermediate</div>
-                        <div class="institution">D.A.V Ara Kuju, Sarubera, Ramgarh, Jharkhand</div>
-                        <div class="edu-time">2019-2021</div>
-                    </div>
-                    <div class="item">
-                        <div class="name">Metriculation</div>
-                        <div class="institution">D.A.V co-operative Sr. Sec. School,Khalari, Ranchi , Jharkhand</div>
-                        <div class="edu-time">2007-2019</div>
-                    </div>
-                </div>
-                <div class="resume-card">
-                    <div class="res-title">
-                        Internship
-                    </div>
-                    <div class="item">
-                        <div class="name">Problem-Solving and Java</div>
-                        <div class="institution">Technical hub Private Limited</div>
-                        <div class="course-time">May 2023 - July 2023
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="name">Machine Learning with Python</div>
-                        <div class="institution">Verzeo Private limited</div>
-                        <div class="course-time">May 2022 - June 2022</div>
-                    </div>
-                                       
-                </div>
-            </div>
-            <div class="flex resume-button"><a href="">Download Full Resume</a> <a href="">View Full Resume</a></div>
-        </section>
-        <section id="Certifications">
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/redhat.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/pythonpearson.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/oracle.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/python.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/cssHackerrank.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/edxhtml.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/cpp.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="/Dashboard/certificates/c.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-
-
-        </section>
-        <section id="Project">
-            <h1 style="text-align: center;">Projects</h1>
-            <h4 style="text-align: center;">Checkout my Project Showcase Website <a href="https://akshat-project-site.onrender.com/">https://akshat-project-site.onrender.com/</a></h4>
-            <div class="container-project flex">
-                <div class="card" style="width: 18rem;">
-                    <img src="/Dashboard/images/msc.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Music Player Project</h5>
-                        <p class="card-text">It is a Web-based Music Player by which we can play the Provided Songs. With play/pause/next/previous functionalities.</p>
-                        <a href="http://akshat-project-site.onrender.com/music" class="btn btn-primary">See Project</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="/Dashboard/images/clc.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Digital Clock Project</h5>
-                        <p class="card-text">A simple Digital clock Shows Time in 12-hour format</p>
-                        <a href="http://akshat-project-site.onrender.com/clock" class="btn btn-primary">See Project</a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="imbeding" style="display: none;">
-
-
-        </section>
-        <section id="Contact">
-            <div class="contact-title">
-                Contact
-            </div>
-            <div class="contact-container">
-                <div class="contact-details">
-                    <p>
-                    <h5>Location :</h5><br>Surampalem,Andhra Pradesh , India</p>
-                    <p>
-                    <h5>Email:</h5><br>kumarsinhaakshat8@gmail.com</p>
-                </div>
-                <div class="contact-form"></div>
-            </div>
-        </section>
-
-    </div>
-
-
-
-
-</body>
-<script src="/Dashboard/js/activeLinks.js"></script>
-<script src="/Dashboard/js/typed.js"></script>
-<script src="/Dashboard/js/typedAbout.js"></script>
-<script src="/Dashboard/js/connectSocial.js"></script>
-<script src="/Dashboard/js/github.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<script src="/Dashboard/js/activeskill.js"></script>
-
-</html>
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(
+      content="width=device-width, initial-scale=1.0" 
+      name="viewport"
+      )
+    title Akshat's portfolio
+    link(
+      href="/Dashboard/css/index.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/fontawesome-free-6.5.2-web/css/all.css" 
+      rel="stylesheet"
+      )
+    link(
+      type="image/x-icon" 
+      href="/Dashboard/images/logo.png" 
+      rel="shortcut icon"
+      )
+    link(
+      href="/Dashboard/css/homeSection.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/css/aboutSection.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/css/utility.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/css/skillSection.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/css/resumeSection.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/css/projectSection.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/css/certificationSection.css" 
+      rel="stylesheet"
+      )
+    link(
+      href="/Dashboard/css/contactSection.css" 
+      rel="stylesheet"
+      )
+  body
+    nav#my-navbar
+      .nav-header.flex
+        img(
+          alt="" 
+          src="/Dashboard/images/mypic.jpg"
+          )
+        h4.white-text Akshat Kumar Sinha
+        #SocialLinks
+          a(
+            onclick="socialProfile('linkedin')" 
+            href="#imbeding" 
+            id="#github"
+            )
+            i.fa-brands.fa-linkedin.fa-lg
+          a(
+            onclick="socialProfile('twitter')" 
+            href="#imbeding"
+            )
+            i.fa-brands.fa-twitter.fa-lg
+          a(
+            onclick="socialProfile('github')" 
+            href="#imbeding"
+            )
+            i.fa-brands.fa-github.fa-lg
+          a(
+            onclick="socialProfile('facebook')" 
+            href="#imbeding"
+            )
+            i.fa-brands.fa-facebook.fa-lg
+          a(
+            onclick="socialProfile('instagram')" 
+            href="#imbeding"
+            )
+            i.fa-brands.fa-instagram.fa-lg
+      ul.flex
+        li.active
+          a(href="#Home")
+            i.fa-solid.fa-house
+            | Home
+        li
+          a(href="#About")
+            i.fa-regular.fa-user
+            | About Me
+        li
+          a(href="#Skills")
+            i.fa-solid.fa-laptop
+            | Skills
+        li
+          a(href="#Resume")
+            i.fa-regular.fa-file
+            | Resume
+        li
+          a(href="#Certifications")
+            i.fa-solid.fa-certificate
+            | Certifications
+        li
+          a(href="#Project")
+            i.fa-solid.fa-list-check
+            | Project
+        li#imbed-nav(style="display: none;")
+          a#variable(href="#imbeding") hi
+        li
+          a(href="#Contact")
+            i.fa-regular.fa-address-book
+            | Contact
+    .my-container
+      section#Home
+        .my-name
+          b
+            | Akshat Kumar Sinha
+            p
+              | I'm a
+              span.text
+              span.cursor |
+      section#About
+        p.aboutTitle About
+        p.aboutSelf
+          | I'm a dedicated web developer and competitive coder passionate about crafting elegant solutions to complex problems. My mission is to leverage my skills in web development and competitive coding to create innovative digital experiences and excel in challenging coding environments.
+        .details.flex
+          img(
+            alt="" 
+            src="/Dashboard/images/mypic.jpg"
+            )
+          div
+            h3
+              span.text
+            table
+              tbody
+                tr
+                  td.bold Birthday
+                  td :
+                  td 17th April 2003
+                tr
+                  td.bold Website
+                  td :
+                  td
+                    a(
+                      target="_blank" 
+                      href="https://akshat-project-site.onrender.com/"
+                      ) https://akshat-project-site.onrender.com/
+                tr
+                  td.bold Phone
+                  td :
+                  td +91 7549679327
+                tr
+                  td.bold City
+                  td :
+                  td Surampalem , Andhra Pradesh
+                tr
+                  td.bold Age
+                  td :
+                  td 22
+                tr
+                  td.bold Degree
+                  td :
+                  td B.Tech
+                tr
+                  td.bold Email
+                  td :
+                  td kumarsinhaakshat8@gmail.com
+        p.aboutSelf
+          | Highly motivated and aspiring web developer, eager to embark on a journey in designing, developing, and maintaining responsive and user-friendly websites and web applications. Proficient in front-end and back-end technologies, with a keen interest in delivering innovative solutions to address client needs and surpass project objectives. Strong problem-solving abilities, coupled with meticulous attention to detail and a relentless drive to stay updated with emerging web technologies, fuel my dedication to crafting high-quality code and delivering exceptional user experiences.p>
+      section#Skills
+        p.skills-title Skills
+        .skills-container.flex
+          .skill-tab.flex
+            a.skill-active(
+              onclick="changeActiveSkill('languages');changeTab('python')" 
+              name="languages"
+              ) Programing Languages
+            a(
+              onclick="changeActiveSkill('webdev');changeTab('html')" 
+              name="webdev"
+              ) Web Development
+            a(
+              onclick="changeActiveSkill('devtools');changeTab('vscode')" 
+              name="devtools"
+              ) Development Tools
+            a(
+              onclick="changeActiveSkill('SystemAdminitstration')" 
+              name="SystemAdminitstration"
+              ) System Administration
+          .skill-tab-container.flex-row
+            #languages.skill-tab-inside
+              p(style="text-align: center;") Languages & Badges Earned
+              .languages-container.flex-row
+                .nav-tab.flex
+                  ul
+                    li.lang-active(
+                      onclick="changeTab('python')" 
+                      name="python"
+                      ) Python
+                    li(
+                      onclick="changeTab('java')" 
+                      name="java"
+                      ) Java
+                    li(
+                      onclick="changeTab('cpp')" 
+                      name="cpp"
+                      ) C++
+                    li(
+                      onclick="changeTab('c')" 
+                      name="c"
+                      ) C
+                #python.language-tab-container.flex-column
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+                #java.language-tab-container.flex-column(style="display: none;")
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+                #cpp.language-tab-container.flex-column(style="display: none;")
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+                #c.language-tab-container.flex-column(style="display: none;")
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+            #webdev.skill-tab-inside(style="display: none;")
+              p(style="text-align: center;") Languages & Badges Earned
+              .languages-container.flex-row
+                .nav-tab.flex
+                  ul
+                    li.lang-active(
+                      onclick="changeTab('html')" 
+                      name="html"
+                      ) Html
+                    li(
+                      onclick="changeTab('css')" 
+                      name="css"
+                      ) CSS
+                    li(
+                      onclick="changeTab('js')" 
+                      name="js"
+                      ) JavaScript
+                    li(
+                      onclick="changeTab('nodejs')" 
+                      name="nodejs"
+                      ) Nodejs
+                #html.language-tab-container.flex-column
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+                #css.language-tab-container.flex-column(style="display: none;")
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+                #js.language-tab-container.flex-column(style="display: none;")
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+                #nodejs.language-tab-container.flex-column(style="display: none;")
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+            #devtools.skill-tab-inside(style="display: none;")
+              p(style="text-align: center;") Languages & Badges Earned
+              .languages-container.flex-row
+                .nav-tab.flex
+                  ul
+                    li.lang-active(
+                      onclick="changeTab('vscode')" 
+                      name="vscode"
+                      ) Python
+                    li(
+                      onclick="changeTab('androidStudio')" 
+                      name="androidStudio"
+                      ) Java
+                #vscode.language-tab-container.flex-column
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+                #androidStudio.language-tab-container.flex-column(style="display: none;")
+                  .img-center
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/python.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonibm.png"
+                      )
+                    img(
+                      alt="" 
+                      src="/Dashboard/badges/pythonpearson.png"
+                      )
+                  .button-bottom
+                    a(href="https://www.hackerrank.com/profile/kumarsinhaaksha1")
+                      button.btn.btn-primary Visit HackerRank
+                    a(href="https://www.credly.com/users/aksinha/badges")
+                      button.btn.btn-primary Visit Credly
+            #SystemAdminitstration.skill-tab-inside(style="display: none;")
+              p(style="text-align: center;") Red Hat
+              .system-container
+                p This is my RedHat System Administration CertiFicates
+                .sytem-content.flex
+                  .redhat-badge.flex-column
+                    img(
+                      style="height: 10rem; margin-top: 0.3rem;" 
+                      alt="" 
+                      src="/Dashboard/badges/redhat.png"
+                      )
+                    | This is my redhat Badge
+                  .flex-column
+                    img.redhat-certi-img(
+                      style="height: 15rem; margin-top: 0.7rem;" 
+                      src="/Dashboard/certificates/redhat.jpeg"
+                      )
+                    | This is my Redhat System
+                    |   Administration Certificate
+                div
+                  a(href="https://www.credly.com/users/aksinha/badges")
+                    button.btn.btn-primary Visit Credly
+      section#Resume
+        .resume-title Resume
+        .resume-container.flex
+          .resume-card
+            .res-title SUMMARY
+            .item
+              .name Akshat Kumar Sinha
+              .institution
+                | I'm a dedicated web developer and competitive coder passionate about crafting elegant solutions to complex problems. My mission is to leverage my web development and competitive coding skills to create innovative digital experiences and excel in challenging coding environments.
+              div
+                ul
+                  li Surampalem, Andhra Pradesh, India
+                  li +91 7549679327
+                  li kumarsinhaakshat8@gmail.com
+          .resume-card
+            .res-title Courses
+            .item
+              .name HTML 5 and Fundamentals
+              .institution EDX private ltd.
+              .course-time March 2024 - April 2024
+            .item
+              .name Red Hat System Administration
+              .institution Technical hub private limited
+              .course-time September 2022 - June 2023
+            .item
+              .name Java
+              .institution Technical hub private limited
+              .course-time March 2023 - April 2024
+        .resume-container.flex
+          .resume-card
+            .res-title Education
+            .item
+              .name B. Tech
+              .institution Aditya College of Engineering & Technology, Surampalem, Andhra Pradesh
+              .edu-time 2021-present
+            .item
+              .name Intermediate
+              .institution D.A.V Ara Kuju, Sarubera, Ramgarh, Jharkhand
+              .edu-time 2019-2021
+            .item
+              .name Metriculation
+              .institution D.A.V co-operative Sr. Sec. School,Khalari, Ranchi , Jharkhand
+              .edu-time 2007-2019
+          .resume-card
+            .res-title Internship
+            .item
+              .name Problem-Solving and Java
+              .institution Technical hub Private Limited
+              .course-time May 2023 - July 2023
+            .item
+              .name Machine Learning with Python
+              .institution Verzeo Private limited
+              .course-time May 2022 - June 2022
+        .flex.resume-button
+          a(href="") Download Full Resume
+          a(href="") View Full Resume
+      section#Certifications
+        #carouselExampleInterval.carousel.slide(data-bs-ride="carousel")
+          .carousel-inner
+            .carousel-item.active(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/redhat.jpeg"
+                  )
+            .carousel-item(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/pythonpearson.jpg"
+                  )
+            .carousel-item(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/oracle.jpg"
+                  )
+            .carousel-item(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/python.jpg"
+                  )
+            .carousel-item(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/cssHackerrank.jpeg"
+                  )
+            .carousel-item(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/edxhtml.jpeg"
+                  )
+            .carousel-item(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/cpp.jpeg"
+                  )
+            .carousel-item(data-bs-interval="3000")
+              .flex
+                img.d-block.w-75(
+                  alt="..." 
+                  src="/Dashboard/certificates/c.jpeg"
+                  )
+          button.carousel-control-prev(
+            data-bs-slide="prev" 
+            data-bs-target="#carouselExampleInterval" 
+            type="button"
+            )
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.visually-hidden Previous
+          button.carousel-control-next(
+            data-bs-slide="next" 
+            data-bs-target="#carouselExampleInterval" 
+            type="button"
+            )
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.visually-hidden Next
+      section#Project
+        h1(style="text-align: center;") Projects
+        h4(style="text-align: center;")
+          | Checkout my Project Showcase Website
+          a(href="https://akshat-project-site.onrender.com/") https://akshat-project-site.onrender.com/
+        .container-project.flex
+          .card(style="width: 18rem;")
+            img.card-img-top(
+              alt="..." 
+              src="/Dashboard/images/msc.jpg"
+              )
+            .card-body
+              h5.card-title Music Player Project
+              p.card-text
+                | It is a Web-based Music Player by which we can play the Provided Songs. With play/pause/next/previous functionalities.
+              a.btn.btn-primary(href="http://akshat-project-site.onrender.com/music") See Project
+          .card(style="width: 18rem;")
+            img.card-img-top(
+              alt="..." 
+              src="/Dashboard/images/clc.jpg"
+              )
+            .card-body
+              h5.card-title Digital Clock Project
+              p.card-text A simple Digital clock Shows Time in 12-hour format
+              a.btn.btn-primary(href="http://akshat-project-site.onrender.com/clock") See Project
+      section#imbeding(style="display: none;")
+      section#Contact
+        .contact-title Contact
+        .contact-container.flex
+          .contact-content
+            .contact-content-title Contact Me
+            .contact-content-p You can contact me on the following contact details
+            .contact-content-details
+              .contact-addr.pad-1
+                p Location:
+                | Surampalem, Andhra Pradesh, India
+              .contact-number.pad-1
+                p Phone number:
+                | +91 7549679327
+              .contact-mail.pad-1
+                p Email:
+                | kumarsinhaakshat8@gmail.com
+              .contact-map.pad-1
+                iframe(
+                  referrerpolicy="no-referrer-when-downgrade" 
+                  loading="lazy" 
+                  allowfullscreen="" 
+                  style="border:0;" 
+                  height="100%" 
+                  width="100%" 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1470.0687753242926!2d82.06909033704646!3d17.092381778820954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1713513613619!5m2!1sen!2sin"
+                  )
+          form.contact-form(action="")
+            .contact-form-title Send Me message
+            input#sender-name(
+              required="" 
+              placeholder="Name" 
+              name="name" 
+              type="text"
+              )
+            input#sender-email(
+              required="" 
+              placeholder="Email" 
+              name="email" 
+              type="email"
+              )
+            input#sender-subject(
+              required="" 
+              placeholder="Subject" 
+              name="subject" 
+              type="text"
+              )
+            textarea#sender-message(
+              placeholder="Enter your message here" 
+              rows="10" 
+              cols="30" 
+              name="message"
+              )
+            input#submit(
+              value="Send Message" 
+              type="submit"
+              )
+  script(src="/Dashboard/js/activeLinks.js")
+  script(src="/Dashboard/js/typed.js")
+  script(src="/Dashboard/js/typedAbout.js")
+  script(src="/Dashboard/js/connectSocial.js")
+  script(src="/Dashboard/js/github.js")
+  script(
+    crossorigin="anonymous" 
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    )
+  script(src="/Dashboard/js/activeskill.js")

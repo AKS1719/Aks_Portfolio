@@ -10,11 +10,11 @@ obj = {
 }
 
 icons = {
-    "linkedin":`<i class="fa-brands fa-linkedin fa-lg"></i> \u00A0LinkedIn`,
-    "twitter":`<i class="fa-brands fa-twitter fa-lg"></i>\u00A0 Twitter`,
-    "github" :`<i class="fa-brands fa-github fa-lg"></i> \u00A0Github`,
-    "facebook":`<i class="fa-brands fa-facebook fa-lg"></i> \u00A0FaceBook`,
-    "instagram":`<i class="fa-brands fa-instagram fa-lg"></i>\u00A0 Instagram`
+    "linkedin":`<i class="fa-brands fa-linkedin fa-lg"></i>LinkedIn`,
+    "twitter":`<i class="fa-brands fa-twitter fa-lg"></i> Twitter`,
+    "github" :`<i class="fa-brands fa-github fa-lg"></i> Github`,
+    "facebook":`<i class="fa-brands fa-facebook fa-lg"></i> FaceBook`,
+    "instagram":`<i class="fa-brands fa-instagram fa-lg"></i> Instagram`
 }
 
 

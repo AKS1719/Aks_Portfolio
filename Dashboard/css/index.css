@@ -96,7 +96,7 @@ body{
 
 #my-navbar li i{
     color: grey;
-    
+    margin-right: 0.5rem;
 }
 
 #my-navbar li.active a {

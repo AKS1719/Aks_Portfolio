@@ -17,7 +17,7 @@ a{
 body{
     display: flex;
     /* background-image: url("/Dashboard/images/background.jpg"); */
-    height: 100vh;
+
 }
 
 
@@ -34,7 +34,7 @@ body{
     opacity: 1;
 }
 #my-navbar{
-    height: 100%;
+    height: 100vh;
     /* background-color: rgba(255, 255, 255, 0.3); */
     box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.4);
     width: var(--nav-width);    
@@ -45,7 +45,7 @@ body{
 .nav-header{
     padding-top: 3rem;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .nav-header img{
@@ -166,8 +166,13 @@ section::-webkit-scrollbar{
     overflow: hidden;
     overflow-y: scroll;
 }
-/* @media only screen and (max-width: 768px) {
-    #my-navbar{
-
+@media screen and (max-aspect-ratio: 16/9) {
+    /* Adjust styles for 16:9 aspect ratio screens */
+    #my-navbar li{
+        margin-top: 1rem;
     }
-} */
+    .nav-header{
+        margin-bottom: 1rem;
+    }
+    
+}

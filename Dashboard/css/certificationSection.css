@@ -5,3 +5,8 @@
 }
 
 
+@media only screen and (max-height: 768px) {
+    .w-75{
+        width: 60% !important;
+    }
+}

@@ -87,3 +87,13 @@
     border: 2px solid;
     padding: 0.7rem;
 }
+
+@media only screen and (max-height: 768px) {
+    #Contact{
+        padding: 1rem 4rem;
+    }
+
+    .contact-map{
+        height: 13rem;
+    }
+}

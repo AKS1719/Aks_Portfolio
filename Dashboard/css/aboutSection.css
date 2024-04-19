@@ -35,3 +35,17 @@
 #About a{
     text-decoration: none;
 }
+
+@media only screen and (max-height: 768px) {
+    
+    #About {
+        padding: 1rem 2.4rem ;
+    }
+
+    #About img{
+        height: 20rem;
+    }
+    #About td{
+        padding: 0.4rem;
+    }
+}

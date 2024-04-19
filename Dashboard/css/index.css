@@ -166,13 +166,12 @@ section::-webkit-scrollbar{
     overflow: hidden;
     overflow-y: scroll;
 }
-@media screen and (max-height: 768) {
-    /* Adjust styles for 16:9 aspect ratio screens */
+@media only screen and (max-height: 768px) {
     #my-navbar li{
-        margin-top: 1rem;
+        margin-top: 1.4rem;
     }
     .nav-header{
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
     }
-
+    
 }

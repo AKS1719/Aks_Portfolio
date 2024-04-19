@@ -1,12 +1,14 @@
 #Home{
     position: relative;
-    background-image: url("/Dashboard/images/home-back.jpg");
+    background-image: url("/Dashboard/images/home-back1.jpg");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
     background-position: right;
     background-attachment: fixed;
-    padding: 9rem;
+    padding: 5rem;
+    padding-top: 2rem;
     font-size: 3rem ;
+    /* top: 0; */
 }
 
 #Home::before{
@@ -18,6 +20,7 @@
     right: 0;
     height: 100%;
     width: 100%;
+    /* z-index: -1; */
 }
 
 #Home .cursor {

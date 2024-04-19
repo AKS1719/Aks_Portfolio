@@ -1,13 +1,7 @@
 
 #Certifications{
-    background: url('/Dashboard/images/certiBack.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #f6fcff;
     padding: 2.4rem;
 }
 
-#Certifications  img{
-    height: 48rem;
-}
 

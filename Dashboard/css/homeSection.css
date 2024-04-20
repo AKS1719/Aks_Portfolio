@@ -44,3 +44,14 @@
         opacity: 0;
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+    #Home{
+        font-size: 1.3rem;
+        padding: 2rem;
+        padding-top: 0.1rem;
+    }
+    #Home .my-name{
+        margin-top: 7rem;
+    }
+}

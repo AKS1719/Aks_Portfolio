@@ -49,3 +49,35 @@
         padding: 0.4rem;
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+    
+    #About{
+        padding: 1.3rem;
+        height: max-content;
+        width: 100%;
+    }
+    #About img{
+        height: 20rem;
+    }
+
+    #About .aboutTitle{
+        font-size: 2rem;
+    }
+    
+    #About .aboutSelf{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    #About .details{
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    #About .details div {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+}

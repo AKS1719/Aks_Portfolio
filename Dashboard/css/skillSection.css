@@ -150,3 +150,9 @@
         padding:  1rem;
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+    #Skills .skill-tab{
+        flex-direction: column;
+    }
+}

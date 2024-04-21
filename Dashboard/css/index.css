@@ -184,10 +184,12 @@ section::-webkit-scrollbar{
 
 @media (min-width: 320px) and (max-width: 480px)
 {
-    /* body{
-        height: 80vh;
-    } */
+    body{
+        /* overflow: hidden; */
+        /* overflow-y: scroll; */
+    }
     #my-navbar{
+        resize: none;
         display: hidden;
         width: 0;
         height: 100%;
@@ -202,10 +204,19 @@ section::-webkit-scrollbar{
         display: block;
     }
     .my-container{
+        resize: none;
         width: 100vw;
         /* margin-left: 0 ; */
     }
     section{
         width: 100%;
+        height: max-content;
+    }
+    .nav-header{
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #my-navbar li{
+        margin-top: 1.4rem;
     }
 }

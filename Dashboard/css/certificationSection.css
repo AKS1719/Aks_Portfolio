@@ -9,4 +9,12 @@
     .w-75{
         width: 60% !important;
     }
+    
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    
+    .w-75{
+        width: 100% !important;
+    }
 }

@@ -135,9 +135,7 @@
 }
 
 
-.redhat-certi-img{
-    height: 17rem;
-}
+
 
 @media only screen and (max-height: 768px) {
     #Skills{
@@ -152,7 +150,40 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px){
+    #Skills{
+        padding: 1rem;
+        height: 100%;
+        height: max-content;
+    }
+    #Skills img{
+        height: 4rem;
+    }
+    #Skills .skill-tab-inside{
+        padding: 0;
+    }
+    .languages-container li{
+        padding: 0.5rem;
+        margin-top: 1rem;
+    }
+    .languages-container li:first-child{
+        margin-top: 2.4rem;
+    }
+    
+    .language-tab-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20rem;
+    }
     #Skills .skill-tab{
         flex-direction: column;
+    }
+
+    .redhat-badge img{
+        height: 5rem !important;
+    }
+
+    .redhat-certi-img{
+        height: 8rem !important;
     }
 }

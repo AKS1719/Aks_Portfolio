@@ -101,3 +101,13 @@
         font-size: 0.9rem;
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+    .resume-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #Resume{
+        padding: 1rem 1rem;
+    }
+}

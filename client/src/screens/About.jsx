@@ -42,6 +42,7 @@ function About() {
 				w="100%"
 			>
 				<VStack
+				m={2}
 					spacing={8}
 					align="start"
 					maxW={{base:"100%", lg:"55%"}}
@@ -114,6 +115,7 @@ function About() {
 					// alignItems="center"
 					justifyContent="center"
 					w={{base:"100%",lg:"50%"}}
+					m={2}
 				>
 					<Box
 						height={"80%"}

@@ -47,7 +47,7 @@ function Home() {
 				p={4}
 				// pt={"4rem"}
 				color={"white"}
-				minH={"92vh"}
+				minH={{base:"max-content",lg:"92vh"}}
 				px={[5, 10, 20]}
 				// id="home"
 			>

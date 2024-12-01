@@ -153,8 +153,8 @@ function Skills() {
 					>
 						<Box
 							w="auto"
-							p={2}
-							m={{base:1,md:2}}
+							p={4}
+							m={{base:2,md:2}}
 							_hover={{
 								transform: "scale(1.05)",
 								boxShadow: "lg",

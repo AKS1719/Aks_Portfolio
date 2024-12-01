@@ -13,11 +13,11 @@ import {
 	Flex,
 } from "@chakra-ui/react";
 import { IoPerson, IoMail } from "react-icons/io5";
-
+import conf from "../conf/envconfig.js"
 function Contact() {
 	const [formData, setFormData] = useState({
 		name: "",
-		email: "",
+		senderMail: "",
 		message: "",
 		subject: "",
 	});
@@ -34,7 +34,7 @@ function Contact() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch("http://localhost:5000/api/v1/sendmail", {
+			const response = await fetch(conf.contactUrl, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

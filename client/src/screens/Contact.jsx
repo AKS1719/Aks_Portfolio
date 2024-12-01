@@ -74,6 +74,8 @@ function Contact() {
 			flexDirection={"column"}
 			px={[5, 10, 20]} // Responsive padding
 			py={10}
+			pt={20}
+			// mt={10}
 			height={"100vh"}
 			id="contact"
 		>
@@ -896,7 +898,7 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
+										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
@@ -915,7 +917,7 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
+										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
@@ -935,7 +937,7 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
+										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
@@ -953,7 +955,7 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
+										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
@@ -965,7 +967,7 @@ function Contact() {
 									borderRadius="md"
 									_hover={{ bg: "teal.600" }}
 									_active={{ bg: "teal.700" }}
-									boxShadow="0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)"
+									// boxShadow="0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)"
 								>
 									Send Message
 								</Button>

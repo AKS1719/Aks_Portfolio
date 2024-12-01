@@ -10,6 +10,7 @@ import Projects from "./screens/Projects";
 import Skills from "./screens/Skills";
 import Testimonials from "./screens/Testimonials";
 import Contact from "./screens/Contact";
+import Footer from "./components/Footer";
 
 function App() {
 	const location = useLocation();
@@ -40,6 +41,7 @@ function App() {
 			<Skills/>
 			<Testimonials/>
       <Contact/>
+	  <Footer/>
 		</>
 	);
 }

@@ -100,6 +100,7 @@ const sendMail = asyncHandler(async(req,res)=>{
 					background-color: #ffffff;
 					border-radius: 8px;
 					box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+					overflow: hidden;
 				}
 				.banner {
 					width: 100%;
@@ -112,7 +113,7 @@ const sendMail = asyncHandler(async(req,res)=>{
 				}
 				.content {
 					padding: 20px;
-					text-align: center;
+					text-align: justify;
 				}
 				.thank-you {
 					font-size: 24px;

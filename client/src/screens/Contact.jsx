@@ -13,11 +13,12 @@ import {
 	Flex,
 } from "@chakra-ui/react";
 import { IoPerson, IoMail } from "react-icons/io5";
-import conf from "../conf/envconfig.js"
+import conf from "../conf/envconfig.js";
+
 function Contact() {
 	const [formData, setFormData] = useState({
 		name: "",
-		senderMail: "",
+		senderMail: "", // Keep as senderMail
 		message: "",
 		subject: "",
 	});
@@ -51,14 +52,20 @@ function Contact() {
 					duration: 5000,
 					isClosable: true,
 				});
-				setFormData({ name: "", email: "", message: "", subject: "" });
+				setFormData({
+					name: "",
+					senderMail: "",
+					message: "",
+					subject: "",
+				});
 			} else {
 				throw new Error("Failed to send message");
 			}
 		} catch (error) {
 			toast({
 				title: "Error",
-				description: "Unable to send your message. Please try again later.",
+				description:
+					"Unable to send your message. Please try again later.",
 				status: "error",
 				duration: 5000,
 				isClosable: true,
@@ -74,17 +81,26 @@ function Contact() {
 			flexDirection={"column"}
 			px={[5, 10, 20]} // Responsive padding
 			py={10}
-			pt={20}
-			// mt={10}
 			height={"100vh"}
 			id="contact"
 		>
-			<Heading as="h1" size="2xl" mb="2rem" color="white">
+			<Heading
+				as="h1"
+				size="2xl"
+				mb="2rem"
+				color="white"
+			>
 				Contact Me
 			</Heading>
-			<Flex alignItems={"center"} justifyContent={"center"} width={"100%"}>
-				
-			<Box display={{ base: "none", lg: "flex" }} width={"50%"}>
+			<Flex
+				alignItems={"center"}
+				justifyContent={"center"}
+				width={"100%"}
+			>
+				<Box
+					display={{ base: "none", lg: "flex" }}
+					width={"50%"}
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 790 563"
@@ -155,9 +171,9 @@ function Contact() {
 											id="path56"
 											d="M222.015 539.778C157.683 522.604 101.579 476.087 72.2367 415.592C60.1279 390.628 52.3612 362.908 54.182 335.155C56.0014 307.4 68.2732 279.663 90.2639 263.011C112.253 246.359 144.303 242.756 167.56 257.538C190.03 271.821 200.733 299.209 220.204 317.461C243.475 339.274 280.404 345.641 308.459 330.683C336.514 315.723 352.288 279.369 342.05 248.968C332.575 220.834 305.793 203.339 282.527 185.228C259.261 167.115 236.126 141.651 239.454 112.116C242.315 86.7319 264.382 67.653 287.628 57.7513C332.132 38.7951 389.516 47.2223 419.844 85.2787C452.476 126.224 446.202 185.954 431.486 236.425C416.769 286.896 395.069 337.985 402.391 390.086C408.475 433.375 434.97 472.304 470.109 497.688C505.247 523.075 548.365 535.649 591.441 538.326C634.426 540.999 680.569 532.908 712.364 503.476C744.158 474.044 754.899 419.157 726.78 386.108C712.226 369.003 690.497 360.328 669.604 352.466C648.708 344.604 626.907 336.377 611.765 319.807C596.621 303.236 590.753 275.553 604.995 258.181C621.492 238.058 665.44 235.858 680.982 214.969C692.069 200.069 679.116 171.364 666.529 157.269"
 											stroke="#00C0E0"
-											stroke-width="2.541"
-											stroke-miterlimit="10"
-											stroke-dasharray="7.62 7.62"
+											strokeWidth="2.541"
+											strokeMiterlimit="10"
+											strokeDasharray="7.62 7.62"
 										/>
 									</g>
 									<g id="g58">
@@ -172,8 +188,8 @@ function Contact() {
 											id="path64"
 											d="M107.952 308.508C121.544 366.877 153.477 420.713 197.968 460.267"
 											stroke="#00BBBF"
-											stroke-width="2.02"
-											stroke-miterlimit="10"
+											strokeWidth="2.02"
+											strokeMiterlimit="10"
 										/>
 									</g>
 									<g id="g66">
@@ -188,8 +204,8 @@ function Contact() {
 											id="path72"
 											d="M633.861 349.129C617.182 393.899 586.452 433.173 547.233 459.836"
 											stroke="#00BBBF"
-											stroke-width="1.612"
-											stroke-miterlimit="10"
+											strokeWidth="1.612"
+											strokeMiterlimit="10"
 										/>
 									</g>
 									<g id="g74">
@@ -197,8 +213,8 @@ function Contact() {
 											id="path76"
 											d="M198.233 424.458C213.177 349.774 197.247 269.251 155.048 206.17"
 											stroke="#11ABBA"
-											stroke-width="2.541"
-											stroke-miterlimit="10"
+											strokeWidth="2.541"
+											strokeMiterlimit="10"
 										/>
 									</g>
 									<g id="g78">
@@ -269,8 +285,8 @@ function Contact() {
 											id="path116"
 											d="M546.285 450.207C530.11 375.786 544.71 295.004 585.861 231.219"
 											stroke="#11ABBA"
-											stroke-width="2.541"
-											stroke-miterlimit="10"
+											strokeWidth="2.541"
+											strokeMiterlimit="10"
 										/>
 									</g>
 									<g id="g118">
@@ -348,8 +364,8 @@ function Contact() {
 											id="path160"
 											d="M194.298 545.299C131.158 507.676 73.43 460.749 23.4922 406.451"
 											stroke="#55CDE2"
-											stroke-width="2.541"
-											stroke-miterlimit="10"
+											strokeWidth="2.541"
+											strokeMiterlimit="10"
 										/>
 									</g>
 									<g id="g162">
@@ -364,8 +380,8 @@ function Contact() {
 											id="path168"
 											d="M558.719 549.691C601.746 514.86 639.767 473.689 671.212 427.878"
 											stroke="#55CDE2"
-											stroke-width="1.91"
-											stroke-miterlimit="10"
+											strokeWidth="1.91"
+											strokeMiterlimit="10"
 										/>
 									</g>
 									<g id="g170">
@@ -733,9 +749,9 @@ function Contact() {
 											id="path370"
 											d="M565.214 487.805C565.214 477.497 549.034 468.633 538.283 477.531C527.532 468.633 511.352 477.497 511.352 487.805C511.352 487.805 507.872 508.014 538.283 522.676C568.694 508.014 565.214 487.805 565.214 487.805Z"
 											stroke="#FAFAFA"
-											stroke-width="3.811"
-											stroke-miterlimit="10"
-											stroke-linejoin="round"
+											strokeWidth="3.811"
+											strokeMiterlimit="10"
+											strokeLinejoin="round"
 										/>
 									</g>
 									<g id="g372">
@@ -881,10 +897,23 @@ function Contact() {
 						Let's Work Together
 					</Heading>
 					<form onSubmit={handleSubmit}>
-						<VStack spacing={4} align="stretch">
-							<FormControl id="name" isRequired>
-								<FormLabel fontSize="lg" fontWeight="bold">
-									<Icon as={IoPerson} boxSize={5} color="teal.500" />
+						<VStack
+							spacing={4}
+							align="stretch"
+						>
+							<FormControl
+								id="name"
+								isRequired
+							>
+								<FormLabel
+									fontSize="lg"
+									fontWeight="bold"
+								>
+									<Icon
+										as={IoPerson}
+										boxSize={5}
+										color="teal.500"
+									/>
 									&nbsp;Name
 								</FormLabel>
 								<Input
@@ -898,12 +927,17 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
-							<FormControl id="subject" isRequired>
-								<FormLabel fontSize="lg" fontWeight="bold">
+							<FormControl
+								id="subject"
+								isRequired
+							>
+								<FormLabel
+									fontSize="lg"
+									fontWeight="bold"
+								>
 									&nbsp;Subject
 								</FormLabel>
 								<Input
@@ -917,19 +951,28 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
-							<FormControl id="email" isRequired>
-								<FormLabel fontSize="lg" fontWeight="bold">
-									<Icon as={IoMail} boxSize={5} color="teal.500" />
+							<FormControl
+								id="senderMail"
+								isRequired
+							>
+								<FormLabel
+									fontSize="lg"
+									fontWeight="bold"
+								>
+									<Icon
+										as={IoMail}
+										boxSize={5}
+										color="teal.500"
+									/>
 									&nbsp;Email
 								</FormLabel>
 								<Input
 									type="email"
-									name="email"
-									value={formData.email}
+									name="senderMail" // Matches the state property
+									value={formData.senderMail} // Matches the state property
 									onChange={handleChange}
 									placeholder="Your Email"
 									size="lg"
@@ -937,12 +980,17 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
-							<FormControl id="message" isRequired>
-								<FormLabel fontSize="lg" fontWeight="bold">
+							<FormControl
+								id="message"
+								isRequired
+							>
+								<FormLabel
+									fontSize="lg"
+									fontWeight="bold"
+								>
 									&nbsp;Message
 								</FormLabel>
 								<Textarea
@@ -955,7 +1003,6 @@ function Contact() {
 									borderColor="gray.300"
 									_focus={{
 										borderColor: "teal.500",
-										// boxShadow: "0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)",
 									}}
 								/>
 							</FormControl>
@@ -967,7 +1014,6 @@ function Contact() {
 									borderRadius="md"
 									_hover={{ bg: "teal.600" }}
 									_active={{ bg: "teal.700" }}
-									// boxShadow="0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 20px 5px rgba(0, 255, 255, 0.3)"
 								>
 									Send Message
 								</Button>

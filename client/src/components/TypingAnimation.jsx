@@ -44,7 +44,7 @@ const TypingEffect = () => {
 
     return (
         <Box>
-            <Text fontSize={{ base: "lg", sm: "xl", md: "2xl" }}>
+            <Text as={'span'} fontSize={{ base: "lg", sm: "xl", md: "2xl" }}>
                 <span style={{ color: "#67E6DC" }}>{currentText}</span>
                 <span style={{ color: "gray" }}>|</span>
             </Text>

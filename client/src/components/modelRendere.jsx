@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const ModelViewer = () => {
     const canvasRef = useRef(null);
-    const containerRef = useRef(null); // Ref for the container
+    const containerRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(true);
 
     useEffect(() => {
@@ -13,87 +13,93 @@ const ModelViewer = () => {
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(
             55,
-            container.clientWidth / container.clientHeight, // Use container dimensions for aspect ratio
+            container.clientWidth / container.clientHeight,
             0.1,
             1000
         );
         const renderer = new THREE.WebGLRenderer({
             canvas: canvasRef.current,
             alpha: true,
-            antialias: true, // Turn on antialiasing
+            antialias: true,
         });
 
-        // Set the size of the renderer based on container
         renderer.setSize(container.clientWidth, container.clientHeight);
         renderer.setClearColor(0x000000, 0); // Transparent background
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // Reduce pixel ratio for less GPU load
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
-        // Create a basic light source
-        const light = new THREE.AmbientLight(0xffffff, 0.5); // Reduced intensity for better performance
+        const light = new THREE.AmbientLight(0xffffff, 0.5);
         scene.add(light);
-
-        // Add a directional light
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7); // Reduced intensity
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
         directionalLight.position.set(5, 5, 5);
         scene.add(directionalLight);
 
-        // Load the 3D model using GLTFLoader
         const loader = new GLTFLoader();
+        let model;
+        let mixer;
+        const clock = new THREE.Clock();
+
         loader.load(
-            '../assets/model/portfolioModel.glb',
+            '../assets/model/2.glb', // Path to the .glb file
             (gltf) => {
-                const model = gltf.scene;
-                model.scale.set(0.8, 0.8, 0.8);
-                model.position.x = -1.5;
-
-                // Enable frustum culling to prevent rendering parts of the model out of view
-                model.traverse((child) => {
-                    if (child.isMesh) {
-                        child.frustumCulled = true;
-                    }
-                });
-
+                model = gltf.scene;
                 scene.add(model);
+
+                console.log('Model loaded:', model);
+                console.log('Animations:', gltf.animations);
+
+                if (gltf.animations.length > 0) {
+                    // Create a single AnimationMixer for the whole model
+                    mixer = new THREE.AnimationMixer(model);
+
+                    gltf.animations.forEach((clip) => {
+                        const action = mixer.clipAction(clip);
+                        action.setLoop(THREE.LoopOnce); // Play only once
+                        action.clampWhenFinished = true;
+                        action.play();
+                    });
+                } else {
+                    console.log('No animations found in the model.');
+                }
+
+                model.scale.set(0.7, 0.7, 0.7);
+                model.position.set(-1.5, 0, 0);
             },
             (xhr) => {
-                console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+                console.log(`Loading model: ${(xhr.loaded / xhr.total) * 100}%`);
             },
             (error) => {
                 console.error('An error occurred while loading the model:', error);
             }
         );
 
-        // Adjust camera position
-        camera.position.set(0, 2, 5);
-        camera.lookAt(0, 0, 0.7);
-
-        // Add OrbitControls for mouse gestures
         const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true; // Adds smooth damping effect
-        controls.dampingFactor = 0.05;
-        controls.rotateSpeed = 0.8; // Speed of rotation
-        controls.zoomSpeed = 1.2; // Speed of zoom
-        controls.target.set(0, 0.7, 0); // Focus point
-        controls.update();
 
-        // Animation loop with frame rate control
-        let lastTime = 0;
-        const maxFPS = 60;
-        const animate = (time) => {
+        // Animation loop
+        const animate = () => {
             if (isAnimating) {
                 requestAnimationFrame(animate);
-                const delta = time - lastTime;
-                if (delta > 1000 / maxFPS) {
-                    controls.update(); // Update the controls for smooth interactions
-                    renderer.render(scene, camera);
-                    lastTime = time;
+                const delta = clock.getDelta();
+                if (mixer) {
+                    mixer.update(delta);
                 }
+                controls.update();
+                renderer.render(scene, camera);
             }
         };
 
         animate();
 
-        // Adjust canvas size on container resize
+        // Camera setup
+        camera.position.set(0, 2, 5);
+        camera.lookAt(0, 0, 0.7);
+
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.rotateSpeed = 0.8;
+        controls.zoomSpeed = 1.2;
+        controls.target.set(0, 0.7, 0);
+        controls.update();
+
         const resizeObserver = new ResizeObserver(() => {
             if (container) {
                 camera.aspect = container.clientWidth / container.clientHeight;
@@ -102,13 +108,11 @@ const ModelViewer = () => {
             }
         });
 
-        // Observe the container for size changes
         resizeObserver.observe(container);
 
-        // Clean up on component unmount
         return () => {
             resizeObserver.disconnect();
-            controls.dispose(); // Clean up controls
+            controls.dispose();
         };
     }, [isAnimating]);
 

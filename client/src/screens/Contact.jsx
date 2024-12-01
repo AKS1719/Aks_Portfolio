@@ -81,7 +81,7 @@ function Contact() {
 			flexDirection={"column"}
 			px={[5, 10, 20]} // Responsive padding
 			py={10}
-			height={"100vh"}
+			height={"max-content"}
 			id="contact"
 		>
 			<Heading
